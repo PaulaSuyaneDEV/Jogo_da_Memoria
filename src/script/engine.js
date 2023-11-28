@@ -45,4 +45,6 @@ if(openCards[0].innerHTML === openCards[1].innerHTML){
     openCards[1].classList.remove("boxOpen");
 }
 openCards = [];
-}
+if(document.querySelectorAll(".boxMatch").length === emojis.length){
+    alert("Você ganhou!")
+}}
