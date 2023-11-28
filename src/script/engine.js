@@ -37,5 +37,12 @@ function handleClick(){
 }
 
 function checkMath(){
-
+if(openCards[0].innerHTML === openCards[1].innerHTML){
+    openCards[0].classList.add("boxMatch");
+    openCards[1].classList.add("boxMatch");
+}else {
+    openCards[0].classList.remove("boxOpen");
+    openCards[1].classList.remove("boxOpen");
+}
+openCards = [];
 }
