@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(47,255,60,1) 0%, rgba(51,212,51,1) 77%, rgba(14,244,71,1) 100%);
+    user-select: none;
+
+
+
+}
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(90deg, rgba(129,255,239,1) 0%, rgba(177,255,177,1) 77%, rgba(83,244,182,1) 100%);
+    padding: 40px 60px;
+}
+
+h2 {
+    font-size: 3em;
+    color: #074020;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+}
+
+.reset {
+    padding: 10px;
+    width: 100%;
+    color: rgba(129,255,239,1);
+    background-color: #074020;
+    border: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    cursor: pointer;
+}
+.reset:focus {
+    color: white;
+    background-color: rgba(14,244,71,1);
+}
+
+.jogo {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    align-items: center;
+    justify-content: center;
+}
+.item {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #074020;
+    font-size: 3em;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+.item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(51,212,51,1);
+    transition: 0.25s;
+    opacity: 0.85;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+.boxOpen::after , .boxMatch::after {
+    transform: rotateY(180deg);
+}
