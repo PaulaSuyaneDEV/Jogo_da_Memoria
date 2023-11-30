@@ -83,3 +83,15 @@ h2 {
 .boxOpen::after , .boxMatch::after {
     transform: rotateY(180deg);
 }
+
+@media screen and (max-width: 700px){
+h2 {
+    font-size: 2em;
+}
+.item {
+    width: 75px;
+}
+.reset {
+    width: 50%;
+}
+}
